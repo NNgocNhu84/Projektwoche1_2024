@@ -5,7 +5,8 @@ plugins {
 
 android {
     namespace = "com.ngocnhungo.currency_calculator"
-    compileSdk = 34
+    compileSdk = 35
+
 
     defaultConfig {
         applicationId = "com.ngocnhungo.currency_calculator"
