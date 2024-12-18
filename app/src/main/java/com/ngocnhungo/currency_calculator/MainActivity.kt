@@ -69,7 +69,7 @@ class MainActivity : AppCompatActivity() {
 
                     if (rate != null) {
                         val convertedAmount = amount * rate
-                        editTextTo.setText("%.6f".format(convertedAmount))
+                        editTextTo.setText("%.0f".format(convertedAmount))
                     } else {
                         editTextTo.setText("Kein Kurs")
                     }
