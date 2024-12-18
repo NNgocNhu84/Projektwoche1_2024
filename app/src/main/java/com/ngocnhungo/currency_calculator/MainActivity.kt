@@ -17,14 +17,14 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-        // Tùy chỉnh giao diện với padding
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        // Kết nối Spinner và Adapter
+
         val spinner1: Spinner = findViewById(R.id.spinner1)
         val spinner2: Spinner = findViewById(R.id.spinner2)
         val adapter = ArrayAdapter.createFromResource(
@@ -36,11 +36,11 @@ class MainActivity : AppCompatActivity() {
         spinner1.adapter = adapter
         spinner2.adapter = adapter
 
-        // Kết nối EditText
+
         val editTextFrom: EditText = findViewById(R.id.editTextNumberDecimal4)
         val editTextTo: EditText = findViewById(R.id.editTextNumberDecimal5)
 
-        // Hardcoded tỷ giá hối đoái
+
         val exchangeRates = mapOf(
             "EURtoVND" to 27663.0,
             "EURtoUSD" to 1.09,
@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
             "VNDtoUSD" to 0.00004
         )
 
-        // Lắng nghe sự thay đổi trong EditText "From"
+        
         editTextFrom.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
