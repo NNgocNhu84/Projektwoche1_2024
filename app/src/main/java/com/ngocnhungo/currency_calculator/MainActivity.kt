@@ -50,7 +50,7 @@ class MainActivity : AppCompatActivity() {
             "VNDtoUSD" to 0.00004
         )
 
-        
+
         editTextFrom.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
@@ -69,7 +69,7 @@ class MainActivity : AppCompatActivity() {
 
                     if (rate != null) {
                         val convertedAmount = amount * rate
-                        editTextTo.setText("%.0f".format(convertedAmount))
+                        editTextTo.setText("%.2f".format(convertedAmount))
                     } else {
                         editTextTo.setText("Kein Kurs")
                     }
